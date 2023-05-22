@@ -1,0 +1,15 @@
+.homePage{
+    padding: 50px 0px;
+    background-image:linear-gradient(180deg, rgba(223, 66, 177, 0.42),rgba(223, 66, 177, 0.42)), url("../../../../images/design.webp");
+    background-repeat: no-repeat;
+    width: 100%;
+    font-family: var(--textFamily);
+    color:#fff;
+    background-position: center;
+    background-size: cover;
+}
+.homePage .content .text{
+    padding: 10px ;
+    font-size: 13px;
+    line-height: 28px;
+}

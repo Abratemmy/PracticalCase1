@@ -1,38 +1,66 @@
-.App {
+:root{
+  --textFamily:'Poppins', sans-serif ;
+  --blackColor: #2d2d2d;
+  --blueColor:#6610f2;
+  --purpleColor: rgb(223, 66, 177);
+  --deepblue: rgb(21, 24, 83);
+  --yellowColor: #bcd631;
+  --background: 
+}
+.btn{
+  border-radius: 0.25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.nav-button{
+  position: relative;
+  z-index: 1;
+  height: 46px;
+  line-height: 46px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  display: inline-block;
+  padding: 0 25px;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  border-radius: 23px;
+  -webkit-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
+  overflow: hidden;
+  background: var(--purpleColor)!important;
+}
+.nav-button:hover{
+  color: var(--purpleColor)!important;
+  background: #fff!important;
+  text-decoration: none;
+  -webkit-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
+  outline: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.leaf {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #32557f;
+  background-color: var(--purpleColor);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.leaf {
+  /* @extend .leaf; */
+  border-radius: 0 60% 50% 60%;
+  transform: rotate(45deg);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center
 }
-
-.App-link {
-  color: #61dafb;
+.leaf1 {
+  @extend .leaf;
+  border-radius: 0 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.leaf .icon{
+  transform: rotate(-45deg)!important;
+  font-size: 22px;
 }

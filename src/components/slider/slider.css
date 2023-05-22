@@ -1,0 +1,88 @@
+.bgSlider{
+    position: relative;
+}
+.carouselItem{
+    position: relative;
+    font-family: var(--textFamily);
+}
+.carouselItem:before {
+    content: '';
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(126, 26, 93, 0.822) 0%,rgba(17, 17, 17, 0.856) 100%);
+    z-index: 1;
+}
+.sliderImage{
+    width: 100%;
+    height: 60vh;
+    mask-image: linear-gradient(180deg rgba(78, 3, 59, 0.985) 0%,rgba(47, 0, 33, 0.92) 100%);
+   -webkit-mask-image: linear-gradient(180deg rgba(0, 22, 47, 0.985) 0%,rgba(0,22,47,0.92) 100%);
+}
+.carousel-content{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    text-align: left;
+    color: #fff!important;
+    z-index: 10
+    /* left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: #fff;
+    width: 600px */
+}
+h1{
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 50px;
+    padding: 20px 0px 40px 0px;
+    width: 600px;
+
+}
+.carousel-content p{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+.date-section{
+    background: var(--deepblue);
+    color: #fff;
+    font-family: var(--deepblue);
+    padding: 20px 0px
+}
+.date-section .today{
+    text-transform: uppercase;
+    color: var(--purpleColor);
+    padding-bottom: 15px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.date-section .text{
+    font-size: 12px;
+}
+.date-section .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem
+}
+.date-section .content .eachDate{
+    border: 1px solid #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 110px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.date-section .content .eachDate span{
+    font-size: 14px;
+    font-weight: normal;
+    color: #6b6969;
+    font-weight: 600
+}

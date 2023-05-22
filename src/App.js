@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/slider/Pages/Home/home';
+import AllEvent from './components/slider/Pages/event/allEvent';
+import Bgslider from './components/slider/bgSlider';
+import { Routes, Route } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import SingleEvent from './components/slider/Pages/event/singleEvent';
 
 function App() {
+
+  const queryClient = new QueryClient();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
+        <Routes>
+          <Route exact path='/' caseSensitive={false} element={<Home />} />
+          <Route exact path='/events' caseSensitive={false} element={<AllEvent />} />
+          <Route exact path='/event/:id' caseSensitive={false} element={<SingleEvent />} />
+
+        </Routes>
+      </div>
+    </QueryClientProvider>
   );
 }
 
